@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Open to Bear html file</title>
+</head>
+
+<body>
+
+
+    <h1>Hemanth Venkata Reddy Telluri builds a bear</h1>
+
+    <form>
+        <input type="checkbox" id="first_box" name="first_box" value="hat">
+        <label for="first_box">hat </label><br>
+
+        <input type="checkbox" id="second_box" name="second_box" value="scarf">
+        <label for="check_second">scarf </label><br>
+
+        <input type="checkbox" id="third_box" name="third_box" value="shirt">
+        <label for="third_box">shirt </label><br>
+
+        <input type="button" onclick="startBear()" value="Start a bear">
+        <br>
+    </form>
+    <p id="bearResult">Result will be shown here </p>
+    <script>
+        var my_bear = {}
+
+        function startBear() {
+            my_bear = {}
+            if (document.getElementById("first_box").checked == true)
+                my_bear['hat'] = 'true'
+            else
+                my_bear['hat'] = 'false'
+
+            if (document.getElementById("second_box").checked == true)
+                my_bear['scarf'] = 'true'
+            else
+                my_bear['scarf'] = 'false'
+
+            if (document.getElementById("third_box").checked == true)
+                my_bear['shirt'] = 'true'
+            else
+                my_bear['shirt'] = 'false'
+            document.getElementById("bearResult").innerHTML = JSON.stringify(my_bear)
+            console.log(my_bear)
+        }
+
+        function updatebear() {
+            property = document.getElementById("property").value
+            valueEntered = document.getElementById("valueEntered").value
+            my_bear[property] = valueEntered
+            document.getElementById("bearResult").innerHTML = JSON.stringify(my_bear)
+            console.log(my_bear)
+        }
+    </script>
+
+</body>
+
+</html>
