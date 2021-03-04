@@ -23,6 +23,17 @@
         <input type="button" onclick="startBear()" value="Start a bear">
         <br>
     </form>
+
+    <form>
+        <label for="property">Enter a property</label>
+        <input type="text" id="property" name="property" value="color"><br>
+
+        <label for="valueEntered">Enter a value</label>
+        <input type="text" id="valueEntered" name="valueEntered"><br>
+
+        <input type="button" onclick="updatebear()" value="Update the bear" class="btn btn-primary">
+    </form>
+
     <p id="bearResult">Result will be shown here </p>
     <script>
         var my_bear = {}
